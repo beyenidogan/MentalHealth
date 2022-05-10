@@ -30,6 +30,11 @@ h2{
   scroll-snap-type: y mandatory;
 }
 
+.scrolltext {
+  padding-top:2em;
+}
+
+
 .scroller section {
   height: 900px;
   scroll-snap-align: start;
@@ -107,6 +112,7 @@ body {
 
 .countries{
   stroke:white;
+  fill-opacity:0.4;
 }
 #dropdown-resource {
   background-color: rgba(256,256,256,0.1);
