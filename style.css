@@ -25,7 +25,7 @@ h2{
 }
 
 .scroller {
-  height: 800px;
+  height: 900px;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -37,7 +37,7 @@ h2{
 
 
 .scroller section {
-  height: 830px;
+  height: 900px;
   scroll-snap-align: start;
 }
 ::-webkit-scrollbar {
