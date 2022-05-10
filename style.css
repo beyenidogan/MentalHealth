@@ -25,18 +25,19 @@ h2{
 }
 
 .scroller {
-  height: 900px;
+  height: 800px;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
 .scrolltext {
   padding-top:2em;
+  color:#a86f4a;
 }
 
 
 .scroller section {
-  height: 900px;
+  height: 830px;
   scroll-snap-align: start;
 }
 ::-webkit-scrollbar {
