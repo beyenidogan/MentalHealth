@@ -80,6 +80,8 @@ class Map {
               draw(); // re-call the draw function when we set a new hoveredState
           }); */
         
+//some clean code
+
         //Bubbles
         const dot = this.svg.selectAll("circle")
           .data(filteredConditionData)
