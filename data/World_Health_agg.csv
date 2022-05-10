@@ -1,0 +1,22 @@
+﻿measure_name,cause_name,cause_category,cause_subcategory,cause_level,val,selection,whenselected
+Total Number of Cases,Other drug use disorders,Substance use disorders,Drug use disorders,3,21.00297754,1,"alcohol, substance"
+Total Number of Cases,Anorexia nervosa,Mental disorders,Eating disorders,3,50.42600646,3,Eating
+Total Number of Cases,Cocaine use disorders,Substance use disorders,Drug use disorders,3,53.31321385,1,"alcohol, substance"
+Total Number of Cases,Amphetamine use disorders,Substance use disorders,Drug use disorders,3,94.6849305,1,"alcohol, substance"
+Total Number of Cases,Bulimia nervosa,Mental disorders,Eating disorders,3,126.5410234,3,Eating
+Total Number of Cases,Eating disorders,Mental disorders,Eating disorders,2,176.2141304,2,Mental disorders
+Total Number of Cases,Opioid use disorders,Substance use disorders,Drug use disorders,3,276.4527163,1,"alcohol, substance"
+Total Number of Cases,Schizophrenia,Mental disorders,Schizophrenia,2,304.9713081,2,Mental disorders
+Total Number of Cases,Cannabis use disorders,Substance use disorders,Drug use disorders,3,308.1824412,1,"alcohol, substance"
+Total Number of Cases,Autism spectrum disorders,Mental disorders,Autism spectrum disorders,2,366.0751942,2,Mental disorders
+Total Number of Cases,Bipolar disorder,Mental disorders,Bipolar disorder,2,511.1036057,2,Mental disorders
+Total Number of Cases,Conduct disorder,Mental disorders,Conduct disorder,2,518.37691,2,Mental disorders
+Total Number of Cases,Drug use disorders,Substance use disorders,Drug use disorders,2,733.2423703,1,"alcohol, substance"
+Total Number of Cases,Attention-deficit/hyperactivity disorder,Mental disorders,Attention-deficit/hyperactivity disorder,2,1094.78974,2,Mental disorders
+Total Number of Cases,Dysthymia,Mental disorders,Depressive disorders,3,1298.733943,2,Mental disorders
+Total Number of Cases,Idiopathic developmental intellectual disability,Mental disorders,Idiopathic developmental intellectual disability,2,1390.889612,2,Mental disorders
+Total Number of Cases,Alcohol use disorders,Substance use disorders,Alcohol use disorders,2,1396.614448,1,"alcohol, substance"
+Total Number of Cases,Other mental disorders,Mental disorders,Other mental disorders,2,1514.996482,2,Mental disorders
+Total Number of Cases,Major depressive disorder,Mental disorders,Depressive disorders,3,2392.936559,2,Mental disorders
+Total Number of Cases,Depressive disorders,Mental disorders,Depressive disorders,2,3613.667944,2,Mental disorders
+Total Number of Cases,Anxiety disorders,Mental disorders,Anxiety disorders,2,3895.208644,2,Mental disorders

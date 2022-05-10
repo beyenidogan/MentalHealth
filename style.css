@@ -1,0 +1,227 @@
+header {
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+h1{
+  color:#ED7D31;
+  font-size: 86px;
+}
+h2{
+  color:#F4B183;
+  letter-spacing: 2px;
+  font-size: 36px;
+}
+
+.intro-narrative {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-column-start: 2;
+  padding: 5% 0% 0% 0% ;
+  text-align: center;
+}
+
+.info{
+  color:#F4B183;
+  font-size: 24px;
+}
+
+.scroller {
+  height: 900px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  height: 900px;
+  scroll-snap-align: start;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+body {
+  font-family: 'Ebrima', sans-serif;
+/*   background-image: linear-gradient(to top, #1E3542,rgba(0,0,0,1)); */
+  background-color: #404040;
+  color: white;
+}
+.dashboard {
+  display: grid;
+  padding: 1em 2em;
+/*   height: 1vh;  */
+  grid-template-columns: 3fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 1em;
+}
+
+.dashboard-title {
+/*   display: grid;
+  grid-template-rows: repeat(2, 1fr); */
+  grid-column-start: 1; 
+  grid-column-end: 3; 
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+  letter-spacing: 1px;
+}
+.dashboard-filter-container {
+  display: flex;
+  gap:2em;
+  }
+
+.dashboard-map {
+  /*   display: grid;
+    grid-template-rows: repeat(2, 1fr); */
+  /*  padding:10em 2em 5em 0em;*/
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+    grid-row-start: 1; 
+    grid-row-end: 6; 
+  }
+ 
+#map-chart{
+  /* padding:10em 0em 0em 0em; */
+  padding-top:100px;
+  }
+
+
+.dashboard-details {
+    /*   display: grid;
+      grid-template-rows: repeat(2, 1fr); */
+      grid-column-start: 2; 
+      grid-column-end: 3; 
+      grid-row-start: 1; 
+      grid-row-end: 4; 
+      display:flex;
+      flex-direction: column;
+      background-color:rgba(255,255,255,0.05);
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+/*       -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); */
+      border-radius : 20px;
+      padding:1em 1em 0em 1.5em;
+
+}
+
+.countries{
+  stroke:white;
+}
+#dropdown-resource {
+  background-color: rgba(256,256,256,0.1);
+  color: white;
+  padding: 5px;
+  margin: 5px 0px;
+  max-width: 475px;
+  outline-color: white;
+} 
+
+#dropdown-condition {
+  background-color: rgba(256,256,256,0.1);
+  color: #ec9f6b;
+  padding: 5px;
+  margin: 5px 0px;
+  max-width: 475px;
+  outline-color: #ec9f6b;
+} 
+
+#bar-container {
+/*   background-color: rgba(256,256,256,0.05); */
+  padding: 10px 20px 20px 20px ;
+}
+
+
+
+.infotext {
+  font-size: 18px;
+}
+
+
+option {
+  font-size: 15px;
+}
+
+
+/* unvisited link */
+a:link {
+  color: #555555;
+}
+
+/* visited link */
+a:visited {
+  color: #666666;
+}
+
+/* mouse over link */
+a:hover {
+  color: #777777;
+}
+
+/* selected link */
+a:active {
+  color: #777777;
+}
+
+div.tooltip{
+  position      : absolute;
+  text-align    : center;
+  max-width     : 70px;
+  max-height    : 30px;
+  padding       : 8px;
+  border        : none;
+  border-radius : 8px;
+  margin-top    : -30px;
+  font          : 10px sans-serif;
+  background    : black;
+  color         : whitesmoke;
+  pointer-events: none;
+}
+#tooltip {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  color:white;
+  max-width     : 280px;
+ /*  background-color: rgba(256, 256, 256 ,0.1); */
+  background-color:rgba(67,72,86,0.9);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip h1 {
+
+  font-size: 13px;
+  line-height: 40px;
+}
+#tooltip h2 {
+  margin: 0;
+  color: #977dba;
+  font-size: 16px;
+} 
+#tooltip p1 {
+  font-size: 13px;
+  color: #ccc;
+}
+#month,
+#year, #events {
+  font-size: 14px;
+  color: #fff;
+}
+
+.tick {
+  font-size: 12px;
+  color: #ccc;
+  font-family: 'Ebrima', sans-serif;
+
+}
