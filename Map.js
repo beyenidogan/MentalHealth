@@ -4,8 +4,7 @@ class Map {
         // initialize properties here
         this.width = window.innerWidth * 0.8;
         this.height = window.innerHeight * 0.75;        
-        this.margins = { top: 200, bottom: 30, left: 0, right: 5 };
-        this.duration = 1000;
+        this.margins = { top: 20, bottom: 30, left: 0, right: 5 };
         this.countryjoin =[]
     
         this.svg = d3
@@ -24,7 +23,6 @@ class Map {
 
         //this is all the dropdown filters regardless of the chart type
        
-        let mapData=state.geojson
         let metricData=state.countriesData
 
         let filteredConditionData=metricData.filter(d => d.Metric===state.selectedCondition);
@@ -38,8 +36,6 @@ class Map {
         })
 
         console.log(this.countryjoin)
-        console.log(this.countryjoin["Greece"]["Metric_value"])
-        
         
         const projectionAR = d3.geoMercator().fitSize([this.width, this.height], state.geojson);
         const pathAR=d3.geoPath().projection(projectionAR)
@@ -53,17 +49,14 @@ class Map {
             d3.min(filteredConditionData, function(d) { return d.Metric_Value; }),
             d3.max(filteredConditionData, function(d) { return d.Metric_Value; })
             ])
-            .range(["white","#f86809"]);
+            .range(["white","#f56e14"]);
 
         var mapColor=d3.scaleLinear().domain([
             d3.min(filteredResourceData, function(d) { return d.Metric_Value; }),
             d3.max(filteredResourceData, function(d) { return d.Metric_Value; })])
             .range(["white","black"])
 
-
-        console.log("Georgia color",mapColor(this.countryjoin["Georgia"]))
         console.log("Turkey color",mapColor(this.countryjoin["Turkey"]))
-        console.log("Latvia color",mapColor(this.countryjoin["Latvia"]))
         console.log((this.countryjoin["Georgia"]))
 
         this.svg
@@ -74,13 +67,8 @@ class Map {
           .attr("class", "countries")
           .attr("fill", "white")
           .attr("fill", d=> mapColor(this.countryjoin[d.properties.admin]))
-          /* .on("mouseover", d => {
-              // when the mouse rolls over this feature, do this
-              state.hover["state"] = d.properties.NAME;
-              draw(); // re-call the draw function when we set a new hoveredState
-          }); */
+
         
-//some clean code
 
         //Bubbles
         const dot = this.svg.selectAll("circle")
@@ -89,12 +77,56 @@ class Map {
           .attr("class", "circle")
           .attr("fill",d => circleColor(d.Metric_Value))
           .attr("r", d=> z((d.Metric_Value)))
-          .attr("fill-opacity", "0.6")
+          .attr("fill-opacity", "0.8")
+          .attr("stroke","#f56e14")
+          .style("stroke-width", "1px")
           .attr("transform", d=>{
            const point =projectionAR([d.Longitude, d.Latitude])
            return `translate(${point[0]}, ${point[1]})`
           } )
-          
+        
+        dot.on("mouseover", function(d) {                                                            
+              console.log(d3.event.pageX)
+              d3.select("#map-chart")
+              .selectAll('.div.hover-content')
+                      .style("left", (d3.event.pageX-100)  + "px")
+                      .style("top", d3.event.pageY + "px")						
+                      .select("#events")
+                      .text(d.Country)
+                      .classed("visible", d=> d.visible)
+                      .style("fill", "white")
+              d3.select("#tooltip")       
+                      .select("#month")
+                      .text(d3.timeFormat("%B")(d.Metric_Value))
+                      .style("fill", "white")
+              //Show the tooltip
+              d3.select("#tooltip").classed("hidden", false);
+              })  
+          .on("mouseleave", function(d) {
+                d3.select("#tooltip").classed("hidden", true);
+              })  
+          /* dot
+              .on("mousemove", event => {
+                // 1. get mouse x/y position
+                const {clientX, clientY} = event
+            
+                // 2. invert the projection to go from x/y => lat/long
+                // ref: https://github.com/d3/d3-geo#projection_invert
+                const [long, lat] = projection.invert([clientX, clientY])
+                state.hover=  {
+                  screenPosition: [clientX, clientY], // will be array of [x,y] once mouse is hovered on something
+                  mapPosition: [long, lat], // will be array of [long, lat] once mouse is hovered on something
+                  // State_Name: d.State,
+                  // Proverty_Rate: d.PovertyRate,
+                  
+                  visible: true
+                }
+                draw();
+              }).on("mouseout", event=>{
+                // hide tooltip when not moused over a state
+                state.hover.visible = false
+                draw(); // redraw
+              }) */
 
     }
 

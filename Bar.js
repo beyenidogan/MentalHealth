@@ -69,9 +69,7 @@ class Bar {
 
         let showbyBarData = state.worldData
         console.log(showbyBarData)
-    
-/*         let filteredBarData=showbyBarData.filter(d => d.measure_name===state.selectedOutcome );
-        console.log(filteredBarData) */
+
 
         let filteredBarData=showbyBarData.filter(function(d){
             if (state.selectedCondition==="Alcohol use disorders"||state.selectedCondition==="Substance use disorders"){
@@ -107,7 +105,7 @@ class Bar {
                 enter
                 .append("g")
                 .attr("class", "bar")
-                .attr("fill-opacity", 0.5)
+                .attr("fill-opacity", 0.8)
                 .call(enter => enter.append("rect"))
                 .call(enter => enter.append("text")),
             update => update
