@@ -15,9 +15,9 @@ let state = {
   selectedCondition: "Mental health disorders",
 }
 Promise.all([
-  d3.json("../data/world-110m.geo.json"),
-  d3.csv("../data/Countries_Health_agg_long.csv", d3.autoType),
-  d3.csv("../data/World_Health_agg.csv", d3.autoType),
+  d3.json("./data/world-110m.geo.json"),
+  d3.csv("./data/Countries_Health_agg_long.csv", d3.autoType),
+  d3.csv("./data/World_Health_agg.csv", d3.autoType),
 ]).then(([geojson, countriesdata, worlddata]) => {
     state.geojson = geojson;
     console.log("geojson", state.geojson);
