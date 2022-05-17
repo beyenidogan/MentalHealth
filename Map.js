@@ -2,15 +2,15 @@ class Map {
 
     constructor(state, setGlobalState) {
         // initialize properties here
-        this.width = window.innerWidth * 0.8;
-        this.height = window.innerHeight * 0.75;        
-        this.margins = { top: 20, bottom: 30, left: 0, right: 5 };
+        this.width = window.innerWidth * 1;
+        this.height = window.innerHeight * 0.6;        
+        this.margins = { top: 20, bottom: 30, left: 0, right: 50 };
         this.countryjoin =[]
     
         this.svg = d3
           .select("#map-chart")
           .append("svg")
-          .attr("width", this.width)
+          .attr("width", this.width-this.margins.right)
           .attr("height", this.height);
     }
 
