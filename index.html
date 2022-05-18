@@ -26,7 +26,7 @@
           <div class="intro-narrative">
             <div></div>
             <div>
-               <div></div>
+              <div></div>
               <p class="info">Depression is a common illness worldwide (3.8% of the population, about 280 people).
                 Mental disorders contribute to significantly high mortality rate than the general population with a median life expectancy loss of 10.1 years. (JAMA Psychiatry, 2015)
                 It is estimated mental disorders are cause 14.3% of deaths worldwide, or approximately 8 million deaths each year. (JAMA Psychiatry, 2015). 
@@ -51,7 +51,14 @@
           <div class="dashboard">
             <div class="dashboard-map">
               <div id="space-map"></div>
-              <div id="map-chart"></div>
+              <div id="map-chart">
+                <div id="tooltip" class="hidden">
+                  <h2><strong></strong><span id="tooltipheader">Borough</strong></h2>
+                  <p1>Month: <span id="country"></span></p1>
+                  <br>
+                  <p1>Number of Permits: <span id="cases"></span></p1>
+                </div> 
+              </div>
             </div> 
             <div class="dashboard-title">
               <header>
@@ -60,13 +67,13 @@
                 <div class="dashboard-filter-container">   
                   <div class="dropdown" id="resource-container">
                     <div>
-                      <label for="dropdown" name="dropdown-resource"></label>
+                      <label for="dropdown" name="dropdown-resource" class="dropdown-label1">Resource Availability</label>
                       <select id="dropdown-resource" name="dropdown"></select>
                     </div>
                   </div>
                   <div class="dropdown" id="condition-container">
                     <div>
-                      <label for="dropdown" name="dropdown-condition"></label>
+                      <label for="dropdown" name="dropdown-condition" class="dropdown-label2">Mental Health Cases</label>
                       <select id="dropdown-condition" name="dropdown"></select>
                     </div>
                   </div>
