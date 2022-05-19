@@ -129,7 +129,7 @@ class Bar {
             .attr("dy", "-0.5em")
             .attr("y",d=>yScale(d.cause_name)) 
             .style("fill","white")
-            .style("font-size","13px")
+            .style("font-size","12px")
             .text(d => `${d.cause_name}: ${this.format(d.val)}`); 
     }
   
