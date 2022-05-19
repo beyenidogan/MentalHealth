@@ -222,7 +222,7 @@ div.tooltip{
   color:white;
   max-width     : 280px;
  /*  background-color: rgba(256, 256, 256 ,0.1); */
-  background-color:rgba(67,72,86,0.9);
+  background-color:rgba(43, 43, 43, 0.9);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -243,10 +243,14 @@ div.tooltip{
 }
 #tooltip h2 {
   margin: 0;
-  color: #977dba;
+  color: #ffffff;
   font-size: 16px;
 } 
 #tooltip p1 {
   font-size: 13px;
-  color: #ccc;
+  color: #ec9f6b;
+}
+#tooltip p2 {
+  font-size: 13px;
+  color: rgb(141, 141, 141);
 }
