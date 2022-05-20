@@ -46,9 +46,9 @@ class Map {
         const projectionAR = d3.geoMercator().fitSize([this.width, this.height], state.geojson);
         const pathAR=d3.geoPath().projection(projectionAR)
 
-        const z=d3.scaleSqrt()
-            .domain(d3.extent(filteredConditionData, d=>d.Metric_Value))
-            .range([1, 10])
+        const z=d3.scaleLinear()
+            .domain([0,d3.max(filteredConditionData, d=>d.Metric_Value)])
+            .range([0.01, 7])
         
         var circleColor = d3.scaleLinear()
             .domain([
